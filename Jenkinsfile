@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-              git 'https://github.com/C2-80522/lab-exam.git'
+                git 'https://github.com/C2-80522/lab-exam.git'
             }   
         }
         stage ('docker login') {
             steps {
-               'echo dckr_pat_4qJnvhKQsqhStNWW6b9fOXUZd60 | /usr/bin/docker login -u amita064 --password-stdin'
+                sh 'echo dckr_pat_4qJnvhKQsqhStNWW6b9fOXUZd60 | /usr/bin/docker login -u amita064 --password-stdin'
             }
         }
         stage ('docker build image') {
