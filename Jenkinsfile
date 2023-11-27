@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage ('SCM') {
             steps {
-              git 'https://github.com/C2-80522/lab-exam.git'   
+              git 'https://github.com/C2-80522/lab-exam.git'
+            }   
         }
         stage ('docker login') {
             steps {
