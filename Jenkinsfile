@@ -8,7 +8,7 @@ pipeline {
         }
         stage ('docker login') {
             steps {
-                echo dckr_pat_4qJnvhKQsqhStNWW6b9fOXUZd60 | /usr/bin/docker login -u amita064 --password-stdin
+               'echo dckr_pat_4qJnvhKQsqhStNWW6b9fOXUZd60 | /usr/bin/docker login -u amita064 --password-stdin'
             }
         }
         stage ('docker build image') {
