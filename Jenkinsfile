@@ -31,6 +31,10 @@ pipeline {
             steps {
                 sh '/usr/bin/docker service create --name myservice -p 9876:80 --replicas 5 amita064/mywebsite'
             }
+        
+        stage ('curl') {
+            steps {
+                sh 'curl -I http://localhost:9876'
         }
     }
 }
